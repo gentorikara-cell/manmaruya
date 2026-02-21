@@ -1,0 +1,336 @@
+body {
+  background: linear-gradient(to bottom, #fff4cc, #fffaf0);
+  font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.top-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.top-image img {
+  width: 60%;
+  max-width: 200px;
+  height: auto;
+}
+
+.text1 {
+  text-align: center;
+  margin: 1rem 0;
+  opacity: 0;
+}
+
+.text1 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3em;
+  color: #d35400;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+.text1 h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #f39c12, #f1c40f);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0;
+}
+
+.handwritten {
+  font-family: 'Yomogi', cursive;
+}
+
+/* 豪華な見出し */
+.section-deco {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.deco-label {
+  font-family: 'Yomogi', cursive;
+  font-size: 1.2rem;
+  color: #e67e22;
+  margin: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.deco-title {
+  font-size: 2rem;
+  color: #d35400;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.3em;
+  margin: 0.5rem 0;
+}
+
+.deco-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #f39c12, #f1c40f);
+  border-radius: 2px;
+}
+
+.deco-icon {
+  width: 60px;
+  margin-top: 0.5rem;
+  animation: floatY 3s ease-in-out infinite;
+}
+
+/* セクション共通 */
+.section {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #e67e22;
+  margin-bottom: 1rem;
+  border-left: 6px solid #f39c12;
+  padding-left: 0.5em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.text, .image {
+  flex: 1;
+  padding: 1em;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: none;
+  border-radius: 10px;
+}
+
+.schedule {
+  margin: 1em auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.schedule th, .schedule td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.staff-roll {
+  background-color: #fffef9;
+  border: 2px dashed #f39c12;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.staff-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #444;
+}
+
+.staff-list li {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.staff-list li:nth-child(1) { --i: 1; }
+.staff-list li:nth-child(2) { --i: 2; }
+.staff-list li:nth-child(3) { --i: 3; }
+.staff-list li:nth-child(4) { --i: 4; }
+.staff-list li:nth-child(5) { --i: 5; }
+.staff-list li:nth-child(6) { --i: 6; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("5.jpg"); /* ← 背景画像に差し替えてね */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 244, 204, 0.6); /* クリーム色の半透明オーバーレイ */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: #5c3a00;
+  padding: 2rem;
+}
+
+.hero-logo {
+  width: 230px;
+  height: auto;
+  margin-bottom: 1rem;
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-family: 'Yomogi', cursive;
+  color: #3c2901;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.hero-logo {
+  animation: none !important;
+}
+
+
+/* アニメーション */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.float {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.3rem;
+    line-height: 1.9;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .text, .subtitle, .staff-list, .schedule {
+    font-size: 1.3rem;
+  }
+
+  .member-card {
+    font-size: 1.2rem;
+  }
+}
+
